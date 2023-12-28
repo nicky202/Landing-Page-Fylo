@@ -1,0 +1,108 @@
+:root {
+  --primaryColor: hsl(217, 28%, 15%);
+  --mainBg: hsl(218, 28%, 13%);
+  --footerBg: hsl(216, 53%, 9%);
+  --testimonialsBg: hsl(219, 30%, 18%);
+  --cyanColor: hsl(176, 68%, 64%);
+  --blueColor: hsl(198, 60%, 50%);
+  --errorColor: hsl(0, 100%, 63%);
+  --whiteColor: hsl(0, 0%, 100%);
+
+  /*Font Typography*/
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+.commentsSection {
+  position: relative;
+  width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 4rem 0;
+
+  .quotes {
+    position: absolute;
+    width: 40px;
+    top: -25px;
+    left: -10px;
+    z-index: 1;
+  }
+  .cardComment {
+    position: relative;
+    min-width: 280px;
+    flex: 1;
+    flex-direction: column;
+    background-color: var(--testimonialsBg);
+    padding: 2rem;
+    gap: 1rem;
+    z-index: 2;
+    .comment {
+      p {
+        color: var(--whiteColor);
+        font-size: var(--normalFontSize);
+      }
+    }
+    .profile {
+      width: 100%;
+      flex-direction: row;
+      .image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .details {
+        margin-left: 1rem;
+        .name {
+          color: var(--whiteColor);
+          font-size: var(--smallFontSize);
+          font-weight: 700;
+        }
+        .function {
+          color: var(--whiteColor);
+          font-size: var(--smallestFontSize);
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .commentsSection {
+    .quotes {
+      width: 30px;
+      top: -20px;
+      left: -8px;
+    }
+    .cardComment {
+      padding: 1.5rem;
+      .comment {
+        p {
+          font-size: var(--smallFontSize);
+        }
+      }
+      .profile {
+        .image {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+        .details {
+          .name {
+            font-size: var(--smallestFontSize);
+          }
+          .function {
+            color: var(--whiteColor);
+            font-size: var(--smallestFontSize);
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

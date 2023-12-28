@@ -1,0 +1,114 @@
+:root {
+  --primaryColor: hsl(217, 28%, 15%);
+  --mainBg: hsl(218, 28%, 13%);
+  --footerBg: hsl(216, 53%, 9%);
+  --testimonialsBg: hsl(219, 30%, 18%);
+  --cyanColor: hsl(176, 68%, 64%);
+  --blueColor: hsl(198, 60%, 50%);
+  --errorColor: hsl(0, 100%, 63%);
+  --whiteColor: hsl(0, 0%, 100%);
+
+  /*Font Typography*/
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+.footerSection {
+  width: 100%;
+  padding: 10rem 4rem 3rem 4rem;
+  background-color: var(--footerBg);
+  flex-direction: column;
+  gap: 3rem;
+  .logo {
+    align-self: self-start;
+    img {
+      width: 100px;
+    }
+  }
+  .footerContainer {
+    width: 100%;
+    flex-direction: row;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 4rem;
+    .location {
+      flex: 2.5;
+      max-width: 350px;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
+      font-size: var(--h3FontSize);
+      img {
+        width: 15px;
+      }
+      p {
+        color: var(--whiteColor);
+        font-size: var(--smallestFontSize);
+        opacity: 0.8;
+        text-align: left;
+      }
+    }
+    .contacts {
+      flex: 1;
+      .flex {
+        padding: 0.25rem 0;
+        gap: 1rem;
+        color: var(--whiteColor);
+        font-size: var(--smallFontSize);
+        img {
+          width: 15px;
+        }
+      }
+    }
+    .others {
+      flex: 0.5;
+      li {
+        color: var(--whiteColor);
+        font-size: var(--smallFontSize);
+        padding: 0.25rem 0;
+        opacity: 0.7;
+        cursor: pointer;
+        &:hover {
+          font-weight: 700;
+          opacity: 1;
+        }
+      }
+    }
+    .socialMedia {
+      flex: 1;
+      li {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        margin-left: 1rem;
+        border: 1px solid var(--whiteColor);
+        padding: 0.3rem;
+        fill: var(--whiteColor);
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+          border-color: var(--cyanColor);
+          fill: var(--cyanColor);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .footerSection {
+    gap: 2rem;
+    .footerContainer {
+      flex-direction: column;
+      gap: 2rem;
+      .socialMedia {
+        flex: 1;
+        align-self: center;
+      }
+    }
+  }
+}

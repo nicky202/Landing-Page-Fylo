@@ -14,7 +14,7 @@ Users should be able to:
 ![](./screenshot.jpg)
 
 ### Links
-- Live Site URL: https://classy-marigold-0f8591.netlify.app/
+- Live Site URL: [Responsive Landing Page - Fylo](https://classy-marigold-0f8591.netlify.app/) 
 
 ### Built with
 
